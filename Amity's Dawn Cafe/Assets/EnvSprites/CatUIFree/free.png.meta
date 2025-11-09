@@ -1,0 +1,542 @@
+fileFormatVersion: 2
+guid: dfccaa8e4fd68415e8c5cb5945e83b6b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -337351728639113470
+    second: free_0
+  - first:
+      213: -4965553739594148211
+    second: free_1
+  - first:
+      213: -2491624659041743377
+    second: free_2
+  - first:
+      213: -6030434150411226544
+    second: free_3
+  - first:
+      213: -3755228748222821808
+    second: free_4
+  - first:
+      213: -5501630112818903837
+    second: free_5
+  - first:
+      213: 5306446809137559511
+    second: free_6
+  - first:
+      213: -1007682015698450451
+    second: free_7
+  - first:
+      213: -6991641134031357242
+    second: free_8
+  - first:
+      213: -6160415447981303602
+    second: free_9
+  - first:
+      213: 6896417841489334675
+    second: free_10
+  - first:
+      213: 5575871735612188355
+    second: free_11
+  - first:
+      213: 4308412447922339816
+    second: free_12
+  - first:
+      213: -246151368097011941
+    second: free_13
+  - first:
+      213: -7617837323195907084
+    second: free_14
+  - first:
+      213: 3467876396792827902
+    second: free_15
+  - first:
+      213: 1608922730611987966
+    second: free_16
+  - first:
+      213: -5033581564710112172
+    second: free_17
+  - first:
+      213: -4130016818951302995
+    second: free_18
+  - first:
+      213: 7203673515896535473
+    second: free_19
+  - first:
+      213: 6162077025218292029
+    second: free_20
+  - first:
+      213: 7763109817476047783
+    second: free_21
+  - first:
+      213: -4206953085034969394
+    second: free_22
+  - first:
+      213: 8667212218563747637
+    second: free_23
+  - first:
+      213: 2691798299735221653
+    second: free_24
+  - first:
+      213: 1638884094671746711
+    second: free_25
+  - first:
+      213: 3588723006960434170
+    second: free_26
+  - first:
+      213: 7187214194547050748
+    second: free_27
+  - first:
+      213: -3773892291479192456
+    second: free_28
+  - first:
+      213: 1821353447996864191
+    second: free_29
+  - first:
+      213: -5967272915112141528
+    second: free_30
+  - first:
+      213: 1141529182710942894
+    second: free_31
+  - first:
+      213: -5783965794284557305
+    second: free_32
+  - first:
+      213: -312486692370520845
+    second: free_33
+  - first:
+      213: 4664226415276988432
+    second: free_34
+  - first:
+      213: 5541600983138687670
+    second: free_35
+  - first:
+      213: -4375937314128963928
+    second: free_36
+  - first:
+      213: -6318963139397398117
+    second: free_37
+  - first:
+      213: 4282876964277029134
+    second: free_38
+  - first:
+      213: 3208573360699494988
+    second: free_39
+  - first:
+      213: -6549582046210087261
+    second: free_40
+  - first:
+      213: -2866576719205926970
+    second: free_41
+  - first:
+      213: 5109124947940211034
+    second: free_42
+  - first:
+      213: -8616856731044452517
+    second: free_43
+  - first:
+      213: -5744526273463911111
+    second: free_44
+  - first:
+      213: -7046142337283733753
+    second: free_45
+  - first:
+      213: -3787475026509731136
+    second: free_46
+  - first:
+      213: -1345972550003294147
+    second: free_47
+  - first:
+      213: -8385852559747943580
+    second: free_48
+  - first:
+      213: -2951383726279532441
+    second: free_49
+  - first:
+      213: -7097367445848669656
+    second: free_50
+  - first:
+      213: -3865596276867466747
+    second: free_51
+  - first:
+      213: -4443537899394294306
+    second: free_52
+  - first:
+      213: 6684886053191579803
+    second: free_53
+  - first:
+      213: -3663200747216098633
+    second: free_54
+  - first:
+      213: -690379577438768297
+    second: free_55
+  - first:
+      213: 7285340200487289709
+    second: free_56
+  - first:
+      213: 3778410190769709608
+    second: free_57
+  - first:
+      213: -504850759503899947
+    second: free_58
+  - first:
+      213: -1346600475643192115
+    second: free_59
+  - first:
+      213: 373077381873399757
+    second: free_60
+  - first:
+      213: 6618412415069329350
+    second: free_61
+  - first:
+      213: 4984105581631522284
+    second: free_62
+  - first:
+      213: 2101896281720761029
+    second: free_63
+  - first:
+      213: -7113173013321974609
+    second: free_64
+  - first:
+      213: -5150586416786211144
+    second: free_65
+  - first:
+      213: -8830440132880341340
+    second: free_66
+  - first:
+      213: 2348618178549858148
+    second: free_67
+  - first:
+      213: -5753680477840275507
+    second: free_68
+  - first:
+      213: -5323320700115191511
+    second: free_69
+  - first:
+      213: 7189752468338616038
+    second: free_70
+  - first:
+      213: -8382063980809035268
+    second: free_71
+  - first:
+      213: 6968280136818183448
+    second: free_72
+  - first:
+      213: 8446614466299363296
+    second: free_73
+  - first:
+      213: -3960776263902569336
+    second: free_74
+  - first:
+      213: 6313888863602206428
+    second: free_75
+  - first:
+      213: -9105224923001190992
+    second: free_76
+  - first:
+      213: -1485595143604054237
+    second: free_77
+  - first:
+      213: -3524431168592095316
+    second: free_78
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: free_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36f7ba8767e741eebb325ca479f68df
+      internalID: -337351728639113470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: free_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bdfbcc7eeadf4b449d19cb6e6c97df7
+      internalID: -4965553739594148211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: free_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafa7cfee48b9426ba927cabb3a0cddb
+      internalID: -2491624659041743377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: free_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d6449f56730417f8065f436040ef54
+      internalID: -6030434150411226544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: free_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b2eb5e84a7742b7ba6e1c9e0e7260b
+      internalID: -3755228748222821808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: free_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17e136e4267545318aaab8f6bc96f69
+      internalID: -5501630112818903837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: free_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f7962fcbbad45d49f75c5d113a98be
+      internalID: 5306446809137559511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: free_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af83a8c76fb124de093d93bde9cde5df
+      internalID: -1007682015698450451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 52201504d683c4269bdf0ec1364bf809
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: True
+    nameFileIdTable:
+      free_0: -337351728639113470
+      free_1: -4965553739594148211
+      free_2: -2491624659041743377
+      free_3: -6030434150411226544
+      free_4: -3755228748222821808
+      free_5: -5501630112818903837
+      free_6: 5306446809137559511
+      free_7: -1007682015698450451
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
