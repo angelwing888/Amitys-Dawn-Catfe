@@ -1,6 +1,6 @@
 # Amitys-Dawn-Catfe
 
-**DEMO VIDEO IS IN THE AMITY'S DAWN CATFE FOLDER (not this root folder!)**
+**DEMO VIDEO IS IN THE AMITY'S DAWN CAFE FOLDER (not this root folder!)**
 
 **Updated "Elevator Pitch" (100 words max)**
 
