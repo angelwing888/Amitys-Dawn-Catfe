@@ -18,7 +18,18 @@ public class MenuController : MonoBehaviour
     {
         if (Keyboard.current.tabKey.wasPressedThisFrame)
         {
-            menuCanvas.SetActive(!menuCanvas.activeSelf);
+            if (!menuCanvas.activeSelf && PauseController.IsGamePaused)
+            {
+                return;
+            }
+            ToggleMenu();
         }
+    }
+
+    // Public method that buttons can call
+    public void ToggleMenu()
+    {
+        menuCanvas.SetActive(!menuCanvas.activeSelf);
+        PauseController.SetPause(menuCanvas.activeSelf);
     }
 }
