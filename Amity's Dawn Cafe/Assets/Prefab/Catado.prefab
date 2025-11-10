@@ -101,6 +101,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5550722660799582508, guid: 459ec09d9b5e14463ad4744cec50f75c, type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 1303431105443524201, guid: d1e0518707a6540c2a308ae550e06e09, type: 3}
+    - target: {fileID: 5550722660799582508, guid: 459ec09d9b5e14463ad4744cec50f75c, type: 3}
       propertyPath: itemName
       value: Catado
       objectReference: {fileID: 0}

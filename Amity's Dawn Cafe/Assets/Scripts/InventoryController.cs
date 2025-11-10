@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+
 
 public class InventoryController : MonoBehaviour
 {
@@ -39,6 +41,13 @@ public class InventoryController : MonoBehaviour
                 GameObject newItem = Instantiate(itemPrefab, slot.transform);
                 newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 slot.currentItem = newItem;
+
+                // assign sprite to the slot's Image
+                Item itemComp = newItem.GetComponent<Item>();
+                Image slotImage = slot.GetComponent<Image>();
+                if (itemComp != null && slotImage != null)
+                    slotImage.sprite = itemComp.icon;
+
                 return true;
             }
         }
@@ -46,4 +55,5 @@ public class InventoryController : MonoBehaviour
         Debug.Log("Inventory is full!");
         return false;
     }
+
 }

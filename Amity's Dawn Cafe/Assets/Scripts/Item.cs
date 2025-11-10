@@ -7,6 +7,7 @@ public class Item : MonoBehaviour
     public int ID;
     public string itemName;
     public string uniqueID;   // runtime unique ID
+    public Sprite icon;
 
     private void Awake()
     {
