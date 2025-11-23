@@ -28,6 +28,7 @@ public class CoffeeMachine : MonoBehaviour, IInteractable
             return;
 
         isInteracted = true;
+        SoundEffectManager.Play("Machine");
         OpenBaristaMenu();
     }
 

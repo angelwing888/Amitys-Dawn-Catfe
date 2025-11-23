@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class EmptyCup : MonoBehaviour, IInteractable
 {
     private bool isInteracted = false;
+    public int worth = 20;
 
     [Header("Cup Prefabs")]
     public GameObject emptyCupPrefab; // Assign your empty cup prefab here
@@ -49,6 +50,7 @@ public class EmptyCup : MonoBehaviour, IInteractable
 
         isInteracted = true;
 
+        SoundEffectManager.Play("Cups");
         // Option 1: Pick up cup and add to inventory (if you have collector logic)
         var inventory = FindFirstObjectByType<InventoryController>();
         if (inventory != null)

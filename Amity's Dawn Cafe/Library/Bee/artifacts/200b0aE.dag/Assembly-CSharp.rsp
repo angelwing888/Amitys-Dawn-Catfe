@@ -402,8 +402,6 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/PsdPlugin.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.2D.Animation.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.2D.Animation.Runtime.ref.dll"
--r:"Library/Bee/artifacts/200b0aE.dag/Unity.2D.Aseprite.Common.ref.dll"
--r:"Library/Bee/artifacts/200b0aE.dag/Unity.2D.Aseprite.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.2D.Common.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.2D.Common.Path.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.2D.Common.Runtime.ref.dll"
@@ -486,6 +484,8 @@
 "Assets/Scripts/SaveController.cs"
 "Assets/Scripts/SaveData.cs"
 "Assets/Scripts/Slot.cs"
+"Assets/Scripts/SoundEffectLibrary.cs"
+"Assets/Scripts/SoundEffectManager.cs"
 "Assets/Scripts/TabController.cs"
 -langversion:9.0
 /deterministic
