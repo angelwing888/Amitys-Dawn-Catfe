@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 public class CoffeeMachine : MonoBehaviour, IInteractable
 {
     [Header("UI References")]
+    [SerializeField] private AudioClip baristaMusicTrack;
+    [SerializeField] private AudioClip defaultGameMusic; // assign your normal track
+
     [SerializeField] private GameObject baristaCanvas; // assign your barista UI/menu here
 
     private bool isInteracted = false;
@@ -36,6 +39,10 @@ public class CoffeeMachine : MonoBehaviour, IInteractable
     {
         baristaCanvas.SetActive(true);
         PauseController.SetPause(true);
+        if (baristaMusicTrack != null)
+        {
+            SoundEffectManager.PlayMusic(baristaMusicTrack);
+        }
     }
 
     public void CloseBaristaMenu()
@@ -46,6 +53,11 @@ public class CoffeeMachine : MonoBehaviour, IInteractable
         baristaCanvas.SetActive(false);
         PauseController.SetPause(false);
         isInteracted = false; // allow re-interaction after closing
+
+        if (defaultGameMusic != null)
+        {
+            SoundEffectManager.PlayMusic(defaultGameMusic);
+        }
     }
 
     void Update()
