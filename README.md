@@ -31,6 +31,8 @@ These are the tutorials and assets I used to help create my prototype:
 
 **ASSETS:**
 
+Sprites/Tilemaps: 
+
 https://pixel-boy.itch.io/ninja-adventure-asset-pack
 
 https://purplehillgames.itch.io/hand-painted-2d-cozy-cafe
@@ -42,6 +44,16 @@ https://last-tick.itch.io/pixel-cat-animation-pack-64x64
 https://toffeecraft.itch.io/cat-user-interface
 
 https://bossnelnel.itch.io/8-direction-top-down-character-sprites
+
+Music/SFX:
+
+https://lolurio.itch.io/jazz-bossa-nova-music
+
+https://isiahgames.itch.io/chill-jazz-music-pack
+
+https://kenney.nl/assets/ui-audio
+
+https://kenney.nl/assets/music-jingles
 
 **TUTORIALS:**
 
