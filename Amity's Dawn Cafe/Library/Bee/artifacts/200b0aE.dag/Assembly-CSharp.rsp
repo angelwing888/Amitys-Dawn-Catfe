@@ -477,6 +477,8 @@
 "Assets/Scripts/ItemDictionary.cs"
 "Assets/Scripts/ItemDragHandler.cs"
 "Assets/Scripts/MenuController.cs"
+"Assets/Scripts/NPC.cs"
+"Assets/Scripts/NPCDialogue.cs"
 "Assets/Scripts/PauseController.cs"
 "Assets/Scripts/PlayerInputActions.cs"
 "Assets/Scripts/PlayerItemCollector.cs"

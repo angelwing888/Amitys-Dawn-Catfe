@@ -42,6 +42,13 @@ public class InventoryController : MonoBehaviour
                 newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 slot.currentItem = newItem;
 
+                // Disable the EmptyCup script so it doesn't run in inventory
+                EmptyCup emptyCupScript = newItem.GetComponent<EmptyCup>();
+                if (emptyCupScript != null)
+                {
+                    emptyCupScript.enabled = false;
+                }
+                
                 // assign sprite to the slot's Image
                 Item itemComp = newItem.GetComponent<Item>();
                 Image slotImage = slot.GetComponent<Image>();

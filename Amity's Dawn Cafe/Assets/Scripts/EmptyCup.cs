@@ -16,8 +16,24 @@ public class EmptyCup : MonoBehaviour, IInteractable
 
     void Start()
     {
-        // Start the timer when this full cup spawns
-        StartCoroutine(ChangeToEmptyAfterDelay());
+        // Only start timer if this is in the world, not in inventory UI
+        if (!IsInInventory())
+        {
+            StartCoroutine(ChangeToEmptyAfterDelay());
+        }
+    }
+
+    private bool IsInInventory()
+    {
+        // Check if this object is a child of the inventory panel
+        Transform current = transform;
+        while (current != null)
+        {
+            if (current.GetComponent<InventoryController>() != null)
+                return true;
+            current = current.parent;
+        }
+        return false;
     }
 
     private IEnumerator ChangeToEmptyAfterDelay()

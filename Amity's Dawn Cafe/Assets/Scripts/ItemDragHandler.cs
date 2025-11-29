@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -20,6 +21,17 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         transform.SetParent(transform.root); // above other canvas
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0.6f; //semi-transparent during drag
+        
+        // Clear the slot's image when dragging starts
+        Slot originalSlot = originalParent.GetComponent<Slot>();
+        if (originalSlot != null)
+        {
+            Image slotImage = originalSlot.GetComponent<Image>();
+            if (slotImage != null)
+            {
+                slotImage.sprite = null; // Clear the sprite
+            }
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
