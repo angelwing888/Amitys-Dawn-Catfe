@@ -18,8 +18,9 @@ public class Order : ScriptableObject
             orderID = orderName + Guid.NewGuid().ToString();
         }
     }
+}
 
-    [System.Serializable]
+[System.Serializable]
     public class OrderObjective {
         public string objectiveID;
         public string description;
@@ -59,5 +60,3 @@ public class Order : ScriptableObject
     public string OrderID => order.orderID;
 
     }
-
-}

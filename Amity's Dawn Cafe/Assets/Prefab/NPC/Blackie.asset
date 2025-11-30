@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c4148740dd4425f9bae7def9ab9ef6, type: 3}
+  m_Name: Blackie
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Blackie
+  npcPortrait: {fileID: -4336439813134327283, guid: de67cf4dbe49d40ac8e734512970e5dc, type: 3}
+  dialogueLines:
+  - One Black Catfee, please.
+  - Thanks.
+  - Oh, okay.
+  - Oh, hello.
+  - Thank you.
+  - It's alright. Take your time.
+  - '[Though saying nothing, his eyes sparkled with happiness as he drank]'
+  autoProgressLines: 010101010101
+  endDialogueLines: 000101000101
+  autoProgressDelay: 1
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 2bfe8040b9c5c41368aa0dd21bd7695b, type: 3}
+  voicePitch: 1
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Coming right up!
+    - I'm too busy.
+    nextDialogueIndexes: 0100000002000000
+    givesOrder: 0100
+  - dialogueIndex: 3
+    choices:
+    - Here's your drink.
+    - Sorry, it's not ready yet.
+    nextDialogueIndexes: 0400000005000000
+    givesOrder: 0100
+  orderInProgressIndex: 3
+  orderCompletedIndex: 6
+  order: {fileID: 11400000, guid: f04308abd1e704e93b0b3b5bf2a41f53, type: 2}

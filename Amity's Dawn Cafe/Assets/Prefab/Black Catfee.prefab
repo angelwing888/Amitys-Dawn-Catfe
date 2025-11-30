@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -996744678, guid: d1e0518707a6540c2a308ae550e06e09, type: 3}
+    - target: {fileID: -4464006145463647164, guid: 459ec09d9b5e14463ad4744cec50f75c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4464006145463647164, guid: 459ec09d9b5e14463ad4744cec50f75c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -93754685
+      objectReference: {fileID: 0}
     - target: {fileID: 2775510080300039014, guid: 459ec09d9b5e14463ad4744cec50f75c, type: 3}
       propertyPath: m_Name
       value: Black Catfee

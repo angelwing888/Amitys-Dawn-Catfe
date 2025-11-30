@@ -47,6 +47,30 @@ public class SoundEffectManager : MonoBehaviour
         }
     }
 
+    public static void PlayVoice(AudioClip voiceClip, float pitch = 1f)
+    {
+        if (voiceClip == null || audioSource == null)
+            return;
+        
+        // Store original pitch
+        float originalPitch = audioSource.pitch;
+        
+        // Set custom pitch
+        audioSource.pitch = pitch;
+        
+        // Play the voice clip
+        audioSource.PlayOneShot(voiceClip);
+        
+        // Reset pitch after the clip duration
+        Instance.StartCoroutine(ResetPitchAfterDelay(voiceClip.length, originalPitch));
+    }
+
+    private static IEnumerator ResetPitchAfterDelay(float delay, float originalPitch)
+    {
+        yield return new WaitForSeconds(delay);
+        audioSource.pitch = originalPitch;
+    }
+
     void Start()
     {
         sfxSlider.onValueChanged.AddListener(delegate { OnValueChanged(); });

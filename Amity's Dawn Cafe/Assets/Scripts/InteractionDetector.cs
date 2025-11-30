@@ -53,11 +53,11 @@ public class InteractionDetector : MonoBehaviour
 
         private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log($"OnTriggerEnter2D: hit {collision.gameObject.name}");
+        //Debug.Log($"OnTriggerEnter2D: hit {collision.gameObject.name}");
         
         // Get ALL MonoBehaviours and check if any implement IInteractable
         MonoBehaviour[] components = collision.GetComponents<MonoBehaviour>();
-        Debug.Log($"Found {components.Length} MonoBehaviours");
+        //Debug.Log($"Found {components.Length} MonoBehaviours");
         
         IInteractable interactable = null;
         
@@ -65,16 +65,16 @@ public class InteractionDetector : MonoBehaviour
         {
             if (component == null)
             {
-                Debug.Log("  -> Null component");
+                //Debug.Log("  -> Null component");
                 continue;
             }
             
-            Debug.Log($"  -> Checking {component.GetType().Name}, is IInteractable? {component is IInteractable}");
+            //Debug.Log($"  -> Checking {component.GetType().Name}, is IInteractable? {component is IInteractable}");
             
             if (component is IInteractable)
             {
                 interactable = component as IInteractable;
-                Debug.Log($"  -> Found IInteractable on {component.GetType().Name}");
+                //Debug.Log($"  -> Found IInteractable on {component.GetType().Name}");
                 break;
             }
         }
@@ -86,7 +86,7 @@ public class InteractionDetector : MonoBehaviour
         }
         else
         {
-            Debug.Log($"  -> No IInteractable found on {collision.gameObject.name}");
+            //Debug.Log($"  -> No IInteractable found on {collision.gameObject.name}");
         }
     }
 

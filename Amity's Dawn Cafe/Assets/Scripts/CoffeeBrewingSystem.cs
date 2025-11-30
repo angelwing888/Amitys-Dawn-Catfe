@@ -29,7 +29,7 @@ public class CoffeeBrewingSystem : MonoBehaviour
         recipes.Add("ESP,MF,MF", "Catpuccino");
         recipes.Add("ESP,SM", "Catado");
         recipes.Add("ESP,SM,SM", "Cat White");
-        //recipes.Add("ESP,SM,MF", "Catte Meowchiatto");
+        recipes.Add("ESP,SM,MF", "Catte Meowcchiato");
         
         // Build prefab map by itemName
         Debug.Log($"=== BUILDING PREFAB MAP === Total prefabs: {drinkPrefabs.Count}");
@@ -79,7 +79,7 @@ public class CoffeeBrewingSystem : MonoBehaviour
     {
         if (currentIngredients.Count >= maxIngredients)
         {
-            recipeOutputText.text = "Too many ingredients!";
+            recipeOutputText.text = "Too  many  ingredients!";
             return;
         }
         
@@ -91,7 +91,7 @@ public class CoffeeBrewingSystem : MonoBehaviour
     {
         if (currentIngredients.Count == 0)
         {
-            recipeOutputText.text = "Add ingredients first!";
+            recipeOutputText.text = "Add  ingredients  first!";
             return;
         }
         
@@ -119,7 +119,7 @@ public class CoffeeBrewingSystem : MonoBehaviour
         }
         else
         {
-            recipeOutputText.text = "Invalid recipe!";
+            recipeOutputText.text = "Invalid  recipe!";
             drinkPrefab = failedDrinkPrefab;
             Debug.Log($"No recipe found for: {key}");
         }
@@ -142,6 +142,6 @@ public class CoffeeBrewingSystem : MonoBehaviour
     public void ClearIngredients()
     {
         currentIngredients.Clear();
-        recipeOutputText.text = "Time to brew!";
+        recipeOutputText.text = "Time  to  brew!";
     }
 }

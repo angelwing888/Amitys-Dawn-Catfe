@@ -16,7 +16,7 @@ public class MenuController : MonoBehaviour
 
     void Start()
     {
-        menuCanvas.SetActive(false);
+        menuCanvas.SetActive(true);
 
         if (videoPlayer != null)
         {

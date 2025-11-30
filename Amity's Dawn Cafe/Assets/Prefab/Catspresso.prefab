@@ -167,8 +167,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -969185099
-  m_SortingLayer: 4
+  m_SortingLayerID: -93754685
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1814366084, guid: d1e0518707a6540c2a308ae550e06e09, type: 3}
@@ -229,8 +229,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6141b599b7c4f6280ac0e746eaf508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EmptyCup
+  worth: 20
   emptyCupPrefab: {fileID: 6718429403179954873, guid: 54385ab0d3f584644a854e037788ff96, type: 3}
   timeToEmpty: 10
+  startsEmpty: 0
 --- !u!50 &-8265646422863368685
 Rigidbody2D:
   serializedVersion: 5
