@@ -13,11 +13,17 @@ public class EmptyCup : MonoBehaviour, IInteractable
     public float timeToEmpty = 10f; // seconds before it turns empty
 
     private bool isEmpty = false;
+    
+    [Header("Cup State")]
+    public bool startsEmpty = false; // Check this on the empty cup prefab
 
     void Start()
     {
-        // Only start timer if this is in the world, not in inventory UI
-        if (!IsInInventory())
+        if (startsEmpty)
+        {
+            isEmpty = true; // Mark as empty immediately
+        }
+        else if (!IsInInventory())
         {
             StartCoroutine(ChangeToEmptyAfterDelay());
         }
@@ -45,10 +51,11 @@ public class EmptyCup : MonoBehaviour, IInteractable
     private void ChangeToEmpty()
     {
         if (isEmpty) return; // already changed
-        isEmpty = true;
 
         // Spawn empty cup prefab at the same position and rotation
         Instantiate(emptyCupPrefab, transform.position, transform.rotation);
+
+        isEmpty = true;
 
         // Destroy this full cup
         Destroy(gameObject);
@@ -56,8 +63,8 @@ public class EmptyCup : MonoBehaviour, IInteractable
 
     public bool CanInteract()
     {
-        // Only allow interaction if not already collected or empty
-        return !isEmpty && !isInteracted;
+        // Only allow interaction if empty
+        return isEmpty && !isInteracted;
     }
 
     public void Interact()

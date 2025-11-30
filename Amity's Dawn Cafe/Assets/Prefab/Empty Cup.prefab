@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8390132090682581872, guid: 459ec09d9b5e14463ad4744cec50f75c, type: 3}
+      propertyPath: startsEmpty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8390132090682581872, guid: 459ec09d9b5e14463ad4744cec50f75c, type: 3}
       propertyPath: emptyCupPrefab
       value: 
       objectReference: {fileID: 6718429403179954873}
@@ -18,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: -6560871659865108755, guid: 6c95be635f51d4b8dad934fc65fb93b6, type: 3}
     - target: {fileID: 2775510080300039014, guid: 459ec09d9b5e14463ad4744cec50f75c, type: 3}
       propertyPath: m_Name
-      value: EmptyCup
+      value: Empty Cup
       objectReference: {fileID: 0}
     - target: {fileID: 3775975157953244656, guid: 459ec09d9b5e14463ad4744cec50f75c, type: 3}
       propertyPath: m_Pivot.x

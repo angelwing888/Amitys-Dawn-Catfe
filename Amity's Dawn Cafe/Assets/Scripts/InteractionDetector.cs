@@ -51,31 +51,57 @@ public class InteractionDetector : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-{
-    //Debug.Log($"OnTriggerEnter2D: hit {collision.gameObject.name}");
-
-    // Try the safe GetComponent approach (works reliably with interfaces)
-    var interactable = collision.GetComponent<IInteractable>();
-    if (interactable != null)
+        private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log($"  -> Found IInteractable on {collision.gameObject.name}");
-        interactableInRange = interactable;
-        interactionIcon.SetActive(interactable.CanInteract());
-    }
-    else
-    {
-        //Debug.Log($"  -> No IInteractable on {collision.gameObject.name}. Components: {string.Join(", ", System.Array.ConvertAll(collision.gameObject.GetComponents<Component>(), c => c.GetType().Name))}");
-    }
-}
-
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent(out IInteractable interactable) && interactable == interactableInRange)
+        Debug.Log($"OnTriggerEnter2D: hit {collision.gameObject.name}");
+        
+        // Get ALL MonoBehaviours and check if any implement IInteractable
+        MonoBehaviour[] components = collision.GetComponents<MonoBehaviour>();
+        Debug.Log($"Found {components.Length} MonoBehaviours");
+        
+        IInteractable interactable = null;
+        
+        foreach (MonoBehaviour component in components)
         {
-            interactableInRange = null;
-            interactionIcon.SetActive(false);
+            if (component == null)
+            {
+                Debug.Log("  -> Null component");
+                continue;
+            }
+            
+            Debug.Log($"  -> Checking {component.GetType().Name}, is IInteractable? {component is IInteractable}");
+            
+            if (component is IInteractable)
+            {
+                interactable = component as IInteractable;
+                Debug.Log($"  -> Found IInteractable on {component.GetType().Name}");
+                break;
+            }
+        }
+        
+        if (interactable != null)
+        {
+            interactableInRange = interactable;
+            interactionIcon.SetActive(interactable.CanInteract());
+        }
+        else
+        {
+            Debug.Log($"  -> No IInteractable found on {collision.gameObject.name}");
+        }
+    }
+
+
+        private void OnTriggerExit2D(Collider2D collision)
+    {
+        MonoBehaviour[] components = collision.GetComponents<MonoBehaviour>();
+        foreach (MonoBehaviour component in components)
+        {
+            if (component is IInteractable interactable && interactable == interactableInRange)
+            {
+                interactableInRange = null;
+                interactionIcon.SetActive(false);
+                break;
+            }
         }
     }
 

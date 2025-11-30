@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
 
-public class NPC : MonoBehaviour
+public class NPC : MonoBehaviour, IInteractable
 {
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
@@ -15,7 +15,7 @@ public class NPC : MonoBehaviour
     private bool isTyping, isDialogueActive;
 
     public bool CanInteract() {
-        return !isDialogueActive;
+        return true;
     }
 
     public void Interact() {
@@ -31,19 +31,20 @@ public class NPC : MonoBehaviour
         else {
             StartDialogue();
         }
+    }
 
-        void StartDialogue() {
-            isDialogueActive = true;
-            dialogueIndex = 0;
-
-            nameText.SetText(dialogueData.npcName);
-            portraitImage.sprite = dialogueData.npcPortrait;
-
-            dialoguePanel.SetActive(true);
-            PauseController.SetPause(true);
-
-            StartCoroutine(TypeLine());
-        }
+    void StartDialogue() {
+        isDialogueActive = true;
+        dialogueIndex = 0;
+        nameText.SetText(dialogueData.npcName);
+        portraitImage.sprite = dialogueData.npcPortrait;
+        dialoguePanel.SetActive(true);
+        PauseController.SetPause(true);
+        
+        // Tell the manager which NPC is talking
+        DialogueManager.StartDialogue(this);
+        
+        StartCoroutine(TypeLine());
     }
 
     void NextLine() {
@@ -83,8 +84,13 @@ public class NPC : MonoBehaviour
     public void EndDialogue() {
         StopAllCoroutines();
         isDialogueActive = false;
-        dialogueText.SetText("");
-        dialoguePanel.SetActive(false);
+        
+        if (dialogueText != null)
+            dialogueText.SetText("");
+        
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(false);
+        
         PauseController.SetPause(false);
     }
 }
