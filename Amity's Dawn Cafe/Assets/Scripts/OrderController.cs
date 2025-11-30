@@ -68,6 +68,7 @@ public class OrderController : MonoBehaviour
         // remove order from order log
         OrderProgress order = activateOrders.Find(q => q.OrderID == orderID);
         if (order != null) {
+            ScoreManager.Instance.AddScore(20);
             handinOrderIDs.Add(orderID);
             activateOrders.Remove(order);
             orderUI.UpdateOrderUI();
@@ -108,4 +109,15 @@ public class OrderController : MonoBehaviour
 
         return true;
     }
+
+    // for when player fails at the end
+        public int FailAllOrdersAndCount()
+    {
+        int failedCount = activateOrders.Count;
+        activateOrders.Clear();
+        orderUI.UpdateOrderUI();
+        return failedCount;
+    }
+
+
 }

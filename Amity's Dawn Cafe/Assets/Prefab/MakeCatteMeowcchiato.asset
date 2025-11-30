@@ -16,7 +16,7 @@ MonoBehaviour:
   orderName: Make  Drink
   description: Brew  a  Cat  White  at  the  coffee  machine!
   objectives:
-  - objectiveID: 6
+  - objectiveID: 7
     description: Brew  1  Cat  White
     type: 0
     requiredAmount: 1

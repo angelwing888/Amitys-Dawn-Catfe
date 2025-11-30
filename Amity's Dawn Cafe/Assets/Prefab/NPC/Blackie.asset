@@ -22,8 +22,10 @@ MonoBehaviour:
   - Thank you.
   - It's alright. Take your time.
   - '[Though saying nothing, his eyes sparkled with happiness as he drank]'
-  autoProgressLines: 010101010101
-  endDialogueLines: 000101000101
+  - Oh, that's not... I think there's been a mistake.
+  autoProgressLines: 0101010101010101
+  endDialogueLines: 0001010001010101
+  drinkNotReadyIndex: 7
   autoProgressDelay: 1
   typingSpeed: 0.05
   voiceSound: {fileID: 8300000, guid: 2bfe8040b9c5c41368aa0dd21bd7695b, type: 3}

@@ -1,8 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Video;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
@@ -10,22 +7,25 @@ public class MenuController : MonoBehaviour
     [Header("UI")]
     public GameObject menuCanvas;
 
-    [Header("Video")]
-    public VideoPlayer videoPlayer;      // Assign your VideoPlayer here
-    public bool pauseMusicDuringVideo = true;
-
-    void Start()
+    private void Start()
     {
         menuCanvas.SetActive(true);
 
-        if (videoPlayer != null)
-        {
-            videoPlayer.loopPointReached += OnVideoFinished;
-        }
+        // Subscribe safely to timer event
+        if (GameTimer.Instance != null)
+            GameTimer.Instance.OnTimerEnd += TimeUp;
     }
 
-    void Update()
+    private void OnDestroy()
     {
+        // Unsubscribe safely
+        if (GameTimer.Instance != null)
+            GameTimer.Instance.OnTimerEnd -= TimeUp;
+    }
+
+    private void Update()
+    {
+        // Toggle menu with Tab key
         if (Keyboard.current.tabKey.wasPressedThisFrame)
         {
             if (!menuCanvas.activeSelf && PauseController.IsGamePaused)
@@ -35,39 +35,50 @@ public class MenuController : MonoBehaviour
         }
     }
 
-    // Public method for UI button
+    // Called when timer reaches zero
+    private void TimeUp()
+    {
+        PauseController.SetPause(true);
+
+        // Count failed orders
+        int failedOrders = OrderController.Instance.FailAllOrdersAndCount();
+
+        // Apply penalty
+        int penaltyPerOrder = 30;
+        int totalPenalty = failedOrders * penaltyPerOrder;
+        ScoreManager.Instance.SubtractScore(totalPenalty);
+
+        // Show menu as "Game Over"
+        menuCanvas.SetActive(true);
+    }
+
+    // Toggle the menu on/off
     public void ToggleMenu()
     {
         menuCanvas.SetActive(!menuCanvas.activeSelf);
         PauseController.SetPause(menuCanvas.activeSelf);
     }
 
-    // --- Quit Game ---
+    // Quit the game
     public static void QuitGame()
     {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #else
-            Application.Quit();
-        #endif
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 
-    // --- VIDEO TRIGGERED HERE ---
-    public void PlayTriggeredVideo()
+    // Play button starts the timer and unpauses
+    public void OnPlayButton()
     {
-        if (videoPlayer == null) return;
+        if (GameTimer.Instance != null)
+        {
+            GameTimer.Instance.ResetTimer();  // Optional: reset timer
+            GameTimer.Instance.StartTimer();
+        }
 
-        // pause background music
-        if (pauseMusicDuringVideo)
-            SoundEffectManager.PauseMusic();
-
-        videoPlayer.Play();
-    }
-
-    private void OnVideoFinished(VideoPlayer vp)
-    {
-        // resume background music
-        if (pauseMusicDuringVideo)
-            SoundEffectManager.ResumeMusic();
+        PauseController.SetPause(false);
+        menuCanvas.SetActive(false);
     }
 }

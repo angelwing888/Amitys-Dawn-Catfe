@@ -22,8 +22,10 @@ MonoBehaviour:
   - Thanks for the drink!
   - Humans are so slow...
   - Mmm... my favorite...
+  - You liar! How dare you decieve me like this?
   autoProgressLines: 010101010101
-  endDialogueLines: 000101000101
+  endDialogueLines: 0001010001010101
+  drinkNotReadyIndex: 7
   autoProgressDelay: 1
   typingSpeed: 0.05
   voiceSound: {fileID: 8300000, guid: 2bfe8040b9c5c41368aa0dd21bd7695b, type: 3}
