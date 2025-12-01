@@ -137,6 +137,8 @@ These are the tutorials and assets I used to help create my prototype:
 
 **ASSETS:**
 
+Sprites/Tilemaps: 
+
 https://pixel-boy.itch.io/ninja-adventure-asset-pack
 
 https://purplehillgames.itch.io/hand-painted-2d-cozy-cafe
@@ -149,9 +151,22 @@ https://toffeecraft.itch.io/cat-user-interface
 
 https://bossnelnel.itch.io/8-direction-top-down-character-sprites
 
+https://penzilla.itch.io/top-down-retro-interior
+
+Music/SFX:
+
+https://lolurio.itch.io/jazz-bossa-nova-music
+
+https://isiahgames.itch.io/chill-jazz-music-pack
+
+https://kenney.nl/assets/ui-audio
+
+https://kenney.nl/assets/music-jingles
+
 **TUTORIALS:**
 
 https://www.youtube.com/playlist?list=PLaaFfzxy_80HtVvBnpK_IjSC8_Y9AOhuP
 
 ^ playlist for a top-down RPG game by Game Code Library
 
+https://www.youtube.com/watch?v=rAX_r0yBwzQ
