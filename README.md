@@ -93,11 +93,11 @@ Pastries/Food
 Separate button so that I can see the orders easier
  
 
-**Game Test Summary**
+**My Game Test Summary**
 
 Everyone seemed to enjoy the game’s aesthetics and coziness, especially with the cafe theme, music, and cats. The main critiques were regarding how the pending orders and menu/recipes were embedded in the main menu. Instead, they wanted it outside in a different button or interactable object. I thought about this while making the questions, so I added question 5 asking if they’d want the orders to be in a separate button and interface, and all of them said yes. Game fluidity could be improved through movement and interaction popups. Other new things I could add are more things to turn in (ex. pastries) and more time pressure elements, such as brewing times.
 
-**Claude AI’s summary:**
+**Claude AI’s Summary**
 
 https://claude.ai/share/c060522e-6850-4555-9492-d582d77363f4
 
