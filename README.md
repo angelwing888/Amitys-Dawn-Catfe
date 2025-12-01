@@ -24,6 +24,18 @@ Issues noted:
 
 - Sorting issue with barista interface and main menu interface (fixed)
 
+**List of Questions**
+1. What is one thing you enjoyed about the game?
+
+2. What is one thing that could be improved or changed?
+
+3. Were there any glaring issues you found while playing? This includes movement, overall fluidity, ease of use, etc.
+
+4. Is there anything missing that you wish was in the game?
+
+5. Currently, pending orders are displayed in the main menu/pause menu. Would you rather have it in a separate button where you can continue moving your character while it’s open (at the cost of the timer not pausing while it’s open)? Or do you want it to stay as is?
+
+**Game Tester Answers**
   
 **Game Tester 1 - Brandon**
 1. What is one thing you enjoyed about the game?
