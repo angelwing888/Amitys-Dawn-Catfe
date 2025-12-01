@@ -63,6 +63,9 @@ TagManager:
   - name: Collision2
     uniqueID: 1955985535
     locked: 0
+  - name: Collision3
+    uniqueID: 2489870711
+    locked: 0
   - name: Decor
     uniqueID: 4201212611
     locked: 0

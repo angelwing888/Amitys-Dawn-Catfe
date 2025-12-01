@@ -69,7 +69,7 @@ public class GameTimer : MonoBehaviour
 
         int minutes = Mathf.FloorToInt(timeRemaining / 60f);
         int seconds = Mathf.FloorToInt(timeRemaining % 60f);
-        timerText.text = $"{minutes:00}:{seconds:00}";
+        timerText.text = $"Time  Left:  {minutes:00}:{seconds:00}";
     }
 
     // Optional read-only property

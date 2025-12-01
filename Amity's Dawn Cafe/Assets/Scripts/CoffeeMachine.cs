@@ -38,7 +38,7 @@ public class CoffeeMachine : MonoBehaviour, IInteractable
     private void OpenBaristaMenu()
     {
         baristaCanvas.SetActive(true);
-        PauseController.SetPause(true);
+        //PauseController.SetPause(true);
         if (baristaMusicTrack != null)
         {
             SoundEffectManager.PlayMusic(baristaMusicTrack);
@@ -51,7 +51,7 @@ public class CoffeeMachine : MonoBehaviour, IInteractable
             return;
 
         baristaCanvas.SetActive(false);
-        PauseController.SetPause(false);
+       //PauseController.SetPause(false);
         isInteracted = false; // allow re-interaction after closing
 
         if (defaultGameMusic != null)

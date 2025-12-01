@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -33,6 +34,16 @@ public class MenuController : MonoBehaviour
 
             ToggleMenu();
         }
+    }
+
+    // Restart/Replay the game
+    public void OnReplayButton()
+    {
+        // Unpause the game first
+        PauseController.SetPause(false);
+        
+        // Reload the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     // Called when timer reaches zero
