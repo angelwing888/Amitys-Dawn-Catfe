@@ -53,22 +53,29 @@ public class MenuController : MonoBehaviour
     private void TimeUp()
     {
         PauseController.SetPause(true);
-
-        // Count failed orders
+        
+        // Count active orders that weren't completed
         int failedOrders = OrderController.Instance.FailAllOrdersAndCount();
-
-        // Apply penalty
-        int penaltyPerOrder = 30;
-        int totalPenalty = failedOrders * penaltyPerOrder;
-        ScoreManager.Instance.SubtractScore(totalPenalty);
-
-        // Update the final score display
+        int fulfilledOrders = OrderController.Instance.GetFulfilledOrdersCount();
+        
+        // Apply penalty for accepted but incomplete orders
+        if (failedOrders > 0)
+        {
+            int penaltyPerOrder = 30;
+            int totalPenalty = failedOrders * penaltyPerOrder;
+            ScoreManager.Instance.SubtractScore(totalPenalty);
+        }
+        
+        // Update the final score display with stats
         if (finalScoreText != null)
         {
-            finalScoreText.text = "Final  Score:  " + ScoreManager.Instance.GetScore();
+            int finalScore = ScoreManager.Instance.GetScore();
+            finalScoreText.text = $"Final  Score: {finalScore}\n" +
+                                $"Orders  Fulfilled: {fulfilledOrders}\n" +
+                                $"Orders  Failed: {failedOrders}";
         }
-
-        // Show menu as "Game Over"
+        
+        // Show Game Over canvas
         GOCanvas.SetActive(true);
     }
 

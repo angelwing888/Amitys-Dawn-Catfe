@@ -22,17 +22,23 @@ public class CoffeeMachine : MonoBehaviour, IInteractable
     // === IInteractable Implementation ===
     public bool CanInteract()
     {
-        return !isInteracted;
+        return true;
     }
 
     public void Interact()
     {
-        if (!CanInteract() || baristaCanvas == null)
+        if (baristaCanvas == null)
             return;
-
-        isInteracted = true;
-        SoundEffectManager.Play("Machine");
-        OpenBaristaMenu();
+        
+        // CHANGED: Toggle between open and closed
+        if (baristaCanvas.activeSelf)
+        {
+            CloseBaristaMenu();
+        }
+        else
+        {
+            OpenBaristaMenu();
+        }
     }
 
     private void OpenBaristaMenu()

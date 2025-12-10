@@ -49,6 +49,25 @@ public class GameTimer : MonoBehaviour
         UpdateTimerUI();
     }
 
+    // Add time (positive) or subtract time (negative)
+    public void ModifyTime(float amount)
+    {
+        timeRemaining += amount;
+        
+        // Clamp to prevent negative time or exceeding total time
+        timeRemaining = Mathf.Clamp(timeRemaining, 0f, totalTime);
+        
+        // If time reaches 0, trigger end
+        if (timeRemaining <= 0f)
+        {
+            timeRemaining = 0f;
+            timerActive = false;
+            OnTimerEnd?.Invoke();
+        }
+        
+        UpdateTimerUI();
+    }
+
     // Start the countdown
     public void StartTimer()
     {

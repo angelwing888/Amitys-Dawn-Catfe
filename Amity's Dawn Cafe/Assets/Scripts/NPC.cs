@@ -167,6 +167,7 @@ public class NPC : MonoBehaviour, IInteractable
         
         if (givesOrder) {
             //Debug.Log($"Accepting order: {dialogueData.order.orderName}");
+
             OrderController.Instance.AcceptOrder(dialogueData.order);
             orderState = OrderState.InProgress;
         }

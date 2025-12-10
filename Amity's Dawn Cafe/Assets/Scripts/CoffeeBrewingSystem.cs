@@ -126,7 +126,7 @@ public class CoffeeBrewingSystem : MonoBehaviour
         
         // Pass the PREFAB to inventory (not an instance)
         bool added = inventoryController.AddItem(drinkPrefab);
-        
+        GameTimer.Instance.ModifyTime(-10f);
         if (added)
         {
             Debug.Log("Drink added to inventory successfully!");
