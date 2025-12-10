@@ -14,10 +14,14 @@ public class NPC : MonoBehaviour, IInteractable
 
     private enum OrderState { NotStarted, InProgress, Completed }
     private OrderState orderState = OrderState.NotStarted;
+    
+    [Header("Order Spawning")]
+    [SerializeField] private Transform drinkSpawnPoint; // NEW: Where drinks spawn (on table in front of NPC)
 
     private void Start() {
         dialogueUI = DialogueController.Instance;
     }
+    
     public bool CanInteract() {
         return true;
     }
@@ -94,8 +98,6 @@ public class NPC : MonoBehaviour, IInteractable
     }
 
     void NextLine() {
-        //Debug.Log($"NextLine called. Current dialogueIndex: {dialogueIndex}, isTyping: {isTyping}");
-        
         if (isTyping) {
             // skip typing animation and show full line
             StopAllCoroutines();
@@ -109,22 +111,17 @@ public class NPC : MonoBehaviour, IInteractable
         
         // check EndDialogue lines
         if (dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex]) {
-            //Debug.Log($"Ending dialogue at index {dialogueIndex}");
             EndDialogue();
             return;
         }
         
         // check if choices & display
         foreach(DialogueChoice dialogueChoice in dialogueData.choices) {
-            //Debug.Log($"Checking choice at dialogueIndex {dialogueChoice.dialogueIndex} vs current {dialogueIndex}");
             if (dialogueChoice.dialogueIndex == dialogueIndex) {
-                //Debug.Log($"Displaying choices at index {dialogueIndex}");
                 DisplayChoices(dialogueChoice);
                 return;
             }
         }
-        
-        //Debug.Log($"No choices found, incrementing from {dialogueIndex} to {dialogueIndex + 1}");
         
         if (++dialogueIndex < dialogueData.dialogueLines.Length) {
             // type line if another line
@@ -153,21 +150,15 @@ public class NPC : MonoBehaviour, IInteractable
     }
     
     void DisplayChoices(DialogueChoice choice) {
-        //Debug.Log($"DisplayChoices called with {choice.choices.Length} choices");
         for (int i = 0; i < choice.choices.Length; i++) {
             int nextIndex = choice.nextDialogueIndexes[i];
             bool givesOrder = choice.givesOrder[i];
-            //Debug.Log($"Creating button: '{choice.choices[i]}' -> index {nextIndex}");
             dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex, givesOrder));
         }
     }
 
     void ChooseOption(int nextIndex, bool givesOrder) {
-        //Debug.Log($"ChooseOption called: nextIndex={nextIndex}, givesOrder={givesOrder}");
-        
         if (givesOrder) {
-            //Debug.Log($"Accepting order: {dialogueData.order.orderName}");
-
             OrderController.Instance.AcceptOrder(dialogueData.order);
             orderState = OrderState.InProgress;
         }
@@ -184,8 +175,14 @@ public class NPC : MonoBehaviour, IInteractable
     
     public void EndDialogue() {
         if (orderState == OrderState.InProgress && !OrderController.Instance.IsOrderHandedIn(dialogueData.order.orderID)) {
-            // HandleOrderCompletion
-            HandleOrderCompletion(dialogueData.order);
+            // Try to hand in the order
+            bool wasSuccessful = TryHandInOrder(dialogueData.order);
+            
+            // Only spawn drinks if hand-in was successful
+            if (wasSuccessful)
+            {
+                SpawnOrderDrinks(dialogueData.order);
+            }
         }
 
         StopAllCoroutines();
@@ -195,7 +192,86 @@ public class NPC : MonoBehaviour, IInteractable
         PauseController.SetPause(false);
     }
 
+    // Modified to return success status
+    bool TryHandInOrder(Order order) {
+        // Check if order can be completed (has all items)
+        if (OrderController.Instance.IsOrderCompleted(order.orderID))
+        {
+            OrderController.Instance.HandInOrder(order.orderID);
+            return true; // Successfully handed in
+        }
+        
+        return false; // Not enough items
+    }
+
+    // Remove this method since not using it anymore
+    /*
     void HandleOrderCompletion(Order order) {
         OrderController.Instance.HandInOrder(order.orderID);
+        SpawnOrderDrinks(order);
+    }
+    */
+    
+    // spawn drink prefabs based on order objectives
+    void SpawnOrderDrinks(Order order)
+    {
+        if (drinkSpawnPoint == null)
+        {
+            Debug.LogWarning($"No drink spawn point set for NPC: {dialogueData.npcName}");
+            return;
+        }
+        
+        foreach (OrderObjective objective in order.objectives)
+        {
+            if (objective.type == ObjectiveType.MakeDrink)
+            {
+                // Get the item ID from the objective
+                if (int.TryParse(objective.objectiveID, out int itemID))
+                {
+                    // Find the drink prefab with this ID
+                    GameObject drinkPrefab = FindDrinkPrefabByID(itemID);
+                    
+                    if (drinkPrefab != null)
+                    {
+                        // Spawn the required amount
+                        for (int i = 0; i < objective.requiredAmount; i++)
+                        {
+                            Vector3 spawnOffset = new Vector3(i * 0.3f, 0, 0); // Offset multiple drinks slightly
+                            GameObject spawnedDrink = Instantiate(drinkPrefab, drinkSpawnPoint.position + spawnOffset, Quaternion.identity);
+                            
+                            // Make sure the EmptyCup script is enabled on the spawned drink
+                            EmptyCup emptyCup = spawnedDrink.GetComponent<EmptyCup>();
+                            if (emptyCup != null)
+                            {
+                                emptyCup.enabled = true;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Could not find drink prefab for item ID: {itemID}");
+                    }
+                }
+            }
+        }
+    }
+    
+    // NEW: Helper to find drink prefab by item ID
+    GameObject FindDrinkPrefabByID(int itemID)
+    {
+        // Search through InventoryController's itemPrefabs
+        if (InventoryController.Instance != null)
+        {
+            foreach (GameObject prefab in InventoryController.Instance.itemPrefabs)
+            {
+                Item item = prefab.GetComponent<Item>();
+                if (item != null && item.ID == itemID)
+                {
+                    return prefab;
+                }
+            }
+        }
+        
+        return null;
     }
 }

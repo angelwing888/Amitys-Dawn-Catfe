@@ -29,7 +29,7 @@ MonoBehaviour:
   autoProgressDelay: 1
   typingSpeed: 0.05
   voiceSound: {fileID: 8300000, guid: 2bfe8040b9c5c41368aa0dd21bd7695b, type: 3}
-  voicePitch: 1
+  voicePitch: 0.8
   choices:
   - dialogueIndex: 0
     choices:

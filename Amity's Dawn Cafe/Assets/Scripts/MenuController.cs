@@ -89,11 +89,11 @@ public class MenuController : MonoBehaviour
     // Quit the game
     public static void QuitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit();
+        #endif
     }
 
     // Play button starts the timer and unpauses
