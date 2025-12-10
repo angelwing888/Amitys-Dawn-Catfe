@@ -1,30 +1,155 @@
 # Amitys-Dawn-Catfe
 
-**DEMO VIDEO IS IN THE AMITY'S DAWN CAFE FOLDER (not this root folder!)**
+**Checkpoint 3: Game test summary**
 
-**Updated "Elevator Pitch" (100 words max)**
+Unimplemented at time of testing: 
 
-It's the grand opening for your new coffee shop, and after hours of preparation, you open your doors, to find... cats?? Play Amity's Dawn Catfé, where you can serve catpuccinos and meowcchiatos to little furry companions! Take their orders, make their drinks, and give them a purrfect experience so you can collect funds to upgrade your café! Be careful not to mess up their drinks, or they won't be happy! Enjoy the game in a level by level experience or try out the infinite game modes. And yes, you can pet the cats! 
+- Sink interaction (to place empty cups for points)
 
-**Updated Game synopsis, objective, and brief description of mechanics**
+- Failed drink dialogue
 
-Synopsis:
+- Drink spawning on table after handing in
 
-Amity's Dawn Catfé is a café simulator where the player recieves cat customers and takes their order. Progress through timed levels and upgrade the café or relax with an infinite leisure mode where the player can serve drinks for as long as they want. Players can make and serve drinks to the cats before the time is up, and unlock new drinks as the game continues. As the player progresses, more customers will come while demanding more complex drinks. Become the greatest barista known to cats, and maybe they'll allow pets in return! 
+- Petting the cat
+ 
+Issues noted:
 
-Objective:
+- Making drinks first and interacting with cat after taking order immediately turns it in, setting dialogue to completed index before necessary
 
-The objective of the game is to correctly make the orders of all customers before the timer ends and recieve enough points to progress to the next level. 
+- UI issue with inventory - slot background disappears after swapping items around
 
-Description of Mechanics: 
+- Collision hitbox issues
 
-The player will have to interact with new customers to add their order to the list. They must return behind the counter and interact with the coffee machine to bring up the barista menu, which has instructions to create each drink. Following instructions, they must select different options in the correct order and proportions of espresso, steamed milk, milk foam and water. If they create a drink not listed, the player gets a failed drink in their inventory instead. Then, the player must move through the cafe and remember which drink belongs to which customer. If the drink is made correctly and is brought to the right customer, the player gets full 50 points. If the player was successful within a short amount of time, the player can pet the cat and recieve 20 extra points. If the player brought the incorrect drink to a cat or gives them a failed drink, they get no points. Additional tasks like collecting cups will add to the overall score, adding 10 points for each cup. If any cats are left in the cafe, when the timer is up, 10 points will be lost for each cat. Upon reaching the required point threshold, the player can proceed to the next level. Upgrading the cafe in later levels will add tools to speed along the process. 
+- Interaction icon - change to something else or give another indicator of what player can interact with
 
-The prototype focused on the functionality of the coffee machine and interaction system with the drinks, since that's the most complex core mechanic of the game. This went along with player movement and the splash screen with the instructions, menu, inventory, and settings. Proper implementation of the customers, time mechanic, and score mechanic will be available in the 80% complete project, as that should be more simple. 
+- Sorting issue with barista interface and main menu interface (fixed)
+
+**List of Questions**
+1. What is one thing you enjoyed about the game?
+
+2. What is one thing that could be improved or changed?
+
+3. Were there any glaring issues you found while playing? This includes movement, overall fluidity, ease of use, etc.
+
+4. Is there anything missing that you wish was in the game?
+
+5. Currently, pending orders are displayed in the main menu/pause menu. Would you rather have it in a separate button where you can continue moving your character while it’s open (at the cost of the timer not pausing while it’s open)? Or do you want it to stay as is?
+
+**Game Tester Answers**
+  
+**Game Tester 1 - Brandon**
+1. What is one thing you enjoyed about the game?
+
+I enjoyed the aesthetic and cozy atmosphere. The cats talking are really endearing and adorable.
+ 
+2. What is one thing that could be improved or changed?
+
+The menu with the coffee drinks could be implemented within the café itself instead of the main menu. And maybe a small animation for the coffee brewing?
+ 
+3. Were there any glaring issues you found while playing? This includes movement, overall fluidity, ease of use, etc.  
+
+Maybe the interaction points could be a bit more accessible and obvious instead of just an exclamation point.
+ 
+4. Is there anything missing that you wish was in the game?
+
+A coffee brewing animation.
+ 
+5. Currently, pending orders are displayed in the main menu/pause menu. Would you rather have it in a separate button where you can continue moving your character while it’s open (at the cost of the timer not pausing while it’s open)? Or do you want it to stay as is?
+
+A separate button or an interactable board in the game itself would be great.
+ 
+
+**Game Tester 2 - Emily**
+
+1. What is one thing you enjoyed about the game?
+   
+I enjoyed the café music and cozy vibes.
+ 
+3. What is one thing that could be improved or changed?
+
+The interaction functionality could be more consistent with the other game mechanics, such as allowing menu navigation and dialogue selection via keyboard
+ 
+4. Were there any glaring issues you found while playing? This includes movement, overall fluidity, ease of use, etc. 
+
+When in barista mode, the menu screen can be activated but shows up underneath the barista screen, not on top.
+ 
+5. Is there anything missing that you wish was in the game?
+
+A brewing and/or time delay to add a sense of urgency to completing the tasks.
+ 
+6. Currently, pending orders are displayed in the main menu/pause menu. Would you rather have it in a separate button where you can continue moving your character while it’s open (at the cost of the timer not pausing while it’s open)? Or do you want it to stay as is?
+
+I would like it to be in a separate button or even a small window/notepad that persists on screen at all times when there is an order placed.
+
+ 
+**Game Tester 3 - Cyrene**
+
+1. What is one thing you enjoyed about the game?
+
+I like cats
+
+3. What is one thing that could be improved or changed?
+
+More dialogue or things to give the cats
+
+4. Were there any glaring issues you found while playing? This includes movement, overall fluidity, ease of use, etc. 
+
+Collision hitboxes were a little weird and I had to keep going back and forth to the coffee machine since it forces me to walk away
+
+5. Is there anything missing that you wish was in the game?
+
+Pastries/Food
+
+6. Currently, pending orders are displayed in the main menu/pause menu. Would you rather have it in a separate button where you can continue moving your character while it’s open (at the cost of the timer not pausing while it’s open)? Or do you want it to stay as is?
+
+Separate button so that I can see the orders easier
+ 
+
+**My Game Test Summary**
+
+Everyone seemed to enjoy the game’s aesthetics and coziness, especially with the cafe theme, music, and cats. The main critiques were regarding how the pending orders and menu/recipes were embedded in the main menu. Instead, they wanted it outside in a different button or interactable object. I thought about this while making the questions, so I added question 5 asking if they’d want the orders to be in a separate button and interface, and all of them said yes. Game fluidity could be improved through movement and interaction popups. Other new things I could add are more things to turn in (ex. pastries) and more time pressure elements, such as brewing times.
+
+**Claude AI’s Summary**
+
+https://claude.ai/share/c060522e-6850-4555-9492-d582d77363f4
+
+**What players enjoyed:**
+
+Cozy atmosphere, café music, and aesthetic
+
+Cat characters and their dialogue
+
+**Key improvements requested:**
+
+Order display: All three testers want orders moved from pause menu to either a separate button, in-game board, or persistent on-screen notepad
+
+Brewing mechanics: Two testers requested coffee brewing animations and time delays to add urgency
+
+Interaction improvements: Better indicators than exclamation points, more consistent keyboard controls, easier-to-access interaction points
+
+**Technical issues:**
+
+- Collision hitbox problems (player forced away from coffee machine)
+
+- Menu layering bug (main menu appears under barista screen)
+
+- UI inventory slot background disappearing after item swaps
+
+**Missing content:**
+
+- Pastries/food options
+
+- More dialogue variety
+
+- Additional items to give cats
+
+
 
 These are the tutorials and assets I used to help create my prototype:
 
 **ASSETS:**
+
+Sprites/Tilemaps: 
 
 https://pixel-boy.itch.io/ninja-adventure-asset-pack
 
@@ -38,9 +163,22 @@ https://toffeecraft.itch.io/cat-user-interface
 
 https://bossnelnel.itch.io/8-direction-top-down-character-sprites
 
+https://penzilla.itch.io/top-down-retro-interior
+
+Music/SFX:
+
+https://lolurio.itch.io/jazz-bossa-nova-music
+
+https://isiahgames.itch.io/chill-jazz-music-pack
+
+https://kenney.nl/assets/ui-audio
+
+https://kenney.nl/assets/music-jingles
+
 **TUTORIALS:**
 
 https://www.youtube.com/playlist?list=PLaaFfzxy_80HtVvBnpK_IjSC8_Y9AOhuP
 
 ^ playlist for a top-down RPG game by Game Code Library
 
+https://www.youtube.com/watch?v=rAX_r0yBwzQ
