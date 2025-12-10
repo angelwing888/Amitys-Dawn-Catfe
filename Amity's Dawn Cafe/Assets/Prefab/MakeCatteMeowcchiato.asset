@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Order
   orderID: MakeDrink8a27e5e2c7-699f-4fe0-99c1-134a3897f450
   orderName: Make  Drink
-  description: Brew  a  Cat  White  at  the  coffee  machine!
+  description: Brew  a  Catte  Meowcchiato  at  the  coffee  machine!
   objectives:
   - objectiveID: 7
-    description: Brew  1  Cat  White
+    description: Brew  1  Catte Meowcchiato
     type: 0
     requiredAmount: 1
     currentAmount: 0

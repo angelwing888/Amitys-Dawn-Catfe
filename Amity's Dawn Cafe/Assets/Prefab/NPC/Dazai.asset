@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c4148740dd4425f9bae7def9ab9ef6, type: 3}
+  m_Name: Dazai
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Dazai
+  npcPortrait: {fileID: -4336439813134327283, guid: de67cf4dbe49d40ac8e734512970e5dc, type: 3}
+  dialogueLines:
+  - Hey there! One shot of Catspresso, please. Make it as dark as my soul. *hehe*
+  - Thank you!
+  - Wow, okay. Rude.
+  - Is that for me?
+  - Why, thank you.
+  - Sheesh... how long does a shot of Catspresso take?
+  - Hmm... just as bitter as Chuuya. Perfect.
+  - Chuuya, you didn't secretly change my order, did you?
+  autoProgressLines: 0101010101010101
+  endDialogueLines: 0001010001010101
+  drinkNotReadyIndex: 7
+  autoProgressDelay: 1
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 2bfe8040b9c5c41368aa0dd21bd7695b, type: 3}
+  voicePitch: 1
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Coming right up!
+    - I'm too busy.
+    nextDialogueIndexes: 0100000002000000
+    givesOrder: 0100
+  - dialogueIndex: 3
+    choices:
+    - Here's your drink.
+    - Sorry, it's not ready yet.
+    nextDialogueIndexes: 0400000005000000
+    givesOrder: 0100
+  orderInProgressIndex: 3
+  orderCompletedIndex: 6
+  order: {fileID: 11400000, guid: e945f2bcf7e714d40b3a1e955c8d2ae4, type: 2}

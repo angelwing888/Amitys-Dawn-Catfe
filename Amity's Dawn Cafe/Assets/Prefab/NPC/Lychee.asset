@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c4148740dd4425f9bae7def9ab9ef6, type: 3}
+  m_Name: Lychee
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Lychee
+  npcPortrait: {fileID: 4877620157377092146, guid: 337407079efac436b84acf907ff201e0, type: 3}
+  dialogueLines:
+  - Hello! Can I get a Catado, please?
+  - Thank you so much!
+  - Oh, that's okay!
+  - Hello again!
+  - Ooh, smells good! Thanks!
+  - Oh, okay...
+  - So tasty...
+  - Um... this doesn't look right.
+  autoProgressLines: 010101010101
+  endDialogueLines: 0001010001010101
+  drinkNotReadyIndex: 7
+  autoProgressDelay: 1
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 2bfe8040b9c5c41368aa0dd21bd7695b, type: 3}
+  voicePitch: 1.5
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Coming right up!
+    - I'm too busy.
+    nextDialogueIndexes: 0100000002000000
+    givesOrder: 0100
+  - dialogueIndex: 3
+    choices:
+    - Your drink's ready.
+    - It's not ready.
+    nextDialogueIndexes: 0400000005000000
+    givesOrder: 0100
+  orderInProgressIndex: 3
+  orderCompletedIndex: 6
+  order: {fileID: 11400000, guid: 2731333d8590f49eb86b9d63afb5c849, type: 2}
