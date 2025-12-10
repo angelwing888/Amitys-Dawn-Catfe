@@ -9,6 +9,9 @@ public class OrderController : MonoBehaviour
     private OrderUI orderUI;
 
     private List<string> handinOrderIDs = new();
+    
+    // NEW: Track fulfilled orders count
+    private int fulfilledOrdersCount = 0;
 
     private void Awake() {
         if (Instance == null)
@@ -69,6 +72,7 @@ public class OrderController : MonoBehaviour
         OrderProgress order = activateOrders.Find(q => q.OrderID == orderID);
         if (order != null) {
             ScoreManager.Instance.AddScore(20);
+            fulfilledOrdersCount++; // NEW: Increment fulfilled count
             handinOrderIDs.Add(orderID);
             activateOrders.Remove(order);
             orderUI.UpdateOrderUI();
@@ -111,13 +115,29 @@ public class OrderController : MonoBehaviour
     }
 
     // for when player fails at the end
-        public int FailAllOrdersAndCount()
+    public int FailAllOrdersAndCount()
     {
         int failedCount = activateOrders.Count;
         activateOrders.Clear();
         orderUI.UpdateOrderUI();
         return failedCount;
     }
-
-
+    
+    // NEW: Get number of fulfilled orders
+    public int GetFulfilledOrdersCount()
+    {
+        return fulfilledOrdersCount;
+    }
+    
+    // NEW: Get number of remaining orders
+    public int GetRemainingOrdersCount()
+    {
+        return activateOrders.Count;
+    }
+    
+    // NEW: Get total orders that were ever active
+    public int GetTotalOrdersCount()
+    {
+        return fulfilledOrdersCount + activateOrders.Count;
+    }
 }

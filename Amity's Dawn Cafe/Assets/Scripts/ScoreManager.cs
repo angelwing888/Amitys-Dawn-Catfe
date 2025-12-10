@@ -38,4 +38,17 @@ public class ScoreManager : MonoBehaviour
         if (scoreText != null)
             scoreText.text = "Score: " + score;
     }
+
+    // getter for score
+    public int GetScore()
+    {
+        return score;
+    }
+    
+    // update text for GO screen
+    public void UpdateTextWithScore(TMP_Text textElement)
+    {
+        if (textElement != null)
+            textElement.text = "Final Score: " + score;
+    }
 }

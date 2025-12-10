@@ -2,11 +2,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuController : MonoBehaviour
 {
     [Header("UI")]
     public GameObject menuCanvas;
+    public GameObject GOCanvas;
+    public TMP_Text finalScoreText;
 
     private void Start()
     {
@@ -59,8 +62,14 @@ public class MenuController : MonoBehaviour
         int totalPenalty = failedOrders * penaltyPerOrder;
         ScoreManager.Instance.SubtractScore(totalPenalty);
 
+        // Update the final score display
+        if (finalScoreText != null)
+        {
+            finalScoreText.text = "Final  Score:  " + ScoreManager.Instance.GetScore();
+        }
+
         // Show menu as "Game Over"
-        menuCanvas.SetActive(true);
+        GOCanvas.SetActive(true);
     }
 
     // Toggle the menu on/off
