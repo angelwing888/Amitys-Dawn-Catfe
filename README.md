@@ -18,9 +18,9 @@ The video contains one completed stage of the game. You can see me interacting w
 - Pet the cat
 - Leisure mode (infinite mode)
 
-These are the tutorials and assets I used to help create my game:
-
 **ASSETS:**
+
+These are the tutorials and assets I used to help create my game
 
 Sprites/Tilemaps: 
 
